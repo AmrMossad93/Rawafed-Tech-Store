@@ -1,0 +1,34 @@
+<div class="container animate__animated animate__fadeIn">
+  <mat-card>
+    <mat-card-title>Product List</mat-card-title>
+    <mat-card-subtitle>Here You Are Your Product List</mat-card-subtitle>
+    <mat-card-content>
+      <table class="table table-hover table-striped">
+        <thead>
+        <tr>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let product of productList">
+          <td>{{product.title}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.category}}</td>
+          <td>
+            <button mat-icon-button color="accent" (click)="onNavigateToProductDetails(product.id)">
+              <mat-icon>visibility</mat-icon>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" (click)="onAddNewProduct()">Add New Product</button>
+      <button mat-raised-button (click)="onLoadMoreProductsList()">Load More Products</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

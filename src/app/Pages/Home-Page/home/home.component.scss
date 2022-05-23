@@ -1,0 +1,12 @@
+@import 'src/app/Widgets/Styles/variables.scss';
+
+blockquote {
+  margin: 20px 0 30px;
+  padding-left: 20px;
+  border-left: 5px solid $primary-color;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}

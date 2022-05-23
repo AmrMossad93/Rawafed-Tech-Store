@@ -1,0 +1,21 @@
+<div class="container animate__animated animate__fadeIn">
+  <mat-card>
+    <mat-card-title>{{product.title}}</mat-card-title>
+    <mat-card-subtitle>{{product.category}}</mat-card-subtitle>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p-image [src]="product.image" alt="Image" width="250" [preview]="true"></p-image>
+        </div>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Description: </b> {{product.description}}</li>
+        <li class="list-group-item"><b>Price: </b> {{product.price}}</li>
+        <li class="list-group-item"><b>Count: </b> {{product.rating.count}}</li>
+        <li class="list-group-item">
+          <p-rating [(ngModel)]="product.rating.rate" [disabled]="true" [stars]="10"></p-rating>
+        </li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</div>
